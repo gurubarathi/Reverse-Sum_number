@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOP_JS</title>
+</head>
+<body>
+<script>
+   let input=document.createElement("input");
+    input.setAttribute("id","input1");
+	input.setAttribute("type","number");
+    document.body.appendChild(input);
+	
+	let btn=document.createElement("button");
+	btn.innerHTML="Find Even&odd sum";
+	document.body.appendChild(btn);
+	
+	
+	//finding sum of odd and event nos separatly
+	
+	btn.addEventListener("click",()=>{
+	  let value=input.value;
+	  var sum1=0;
+	  var sum2=0;
+		  while(value>0){
+			  var remain=value%10;
+			  value=(value-remain)/10;
+			  if(remain%2==0){
+			  sum1+=remain;
+			  }else{
+			  sum2+=remain;
+			  }
+			}
+			
+		let p=document.createElement("p")
+	    document.body.appendChild(p);
+		p.innerHTML="the result is"+sum1+"and "+sum2;
+	})
+	
+	//finding a sumof given number
+	
+	let btn2=document.createElement("button");
+	btn2.innerHTML="Find Sum of digits";
+	document.body.appendChild(btn2);
+	btn2.addEventListener("click",()=>{
+	 let value2=input.value;
+	   var sum=0;
+	   while(value2>0){
+		 var remain=value2%10;
+		  value2=(value2-remain)/10;
+		  sum+=remain;
+	   }
+	  let p=document.createElement("p")
+	    document.body.appendChild(p);
+		p.innerHTML="the sum of given no is"+sum;
+    })
+	
+	//finding a reverse of a no
+	
+	let btn3=document.createElement("button");
+	btn3.innerHTML="Find Sum of digits";
+	document.body.appendChild(btn3);
+	btn3.addEventListener("click",()=>{
+	  let value3=input.value;
+	  var sum=0;
+       while(value3>0){
+       var remain=value3%10;
+	   value3=(value3-remain)/10;
+	   sum =(sum*10)+remain; 
+       }	
+      let p=document.createElement("p")
+	   document.body.appendChild(p);
+	   p.innerHTML="the reverse of a number is"+sum;
+	
+	})
+	
+</script>
+</body>
+</html>
